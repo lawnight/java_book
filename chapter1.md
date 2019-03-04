@@ -1,6 +1,6 @@
 # 从volatile变量理解java内存模型
 
-## volatile语义
+## volatile的语义
 
 1. 保证此变量对所有线程的可见性
 2. 禁止指令重排优化
