@@ -1,4 +1,4 @@
-# 理解volatile变量
+# 从volatile变量理解java内存模型
 
 ## 语义
 
