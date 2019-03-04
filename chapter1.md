@@ -67,7 +67,7 @@ class A{
 ```
 ## 双锁模式在单例中的应用
 
-在java中，通过volatile变量，就能保证双锁模式正常使用。其中加入localRef局部变量，减少对volatile变量的使用，来提高程序性能
+在java中，通过volatile变量，就能保证双锁模式正常使用。其中加入localRef局部变量，减少对volatile变量的使用，来提高程序性能。
 ```java
 class Foo {
     private volatile Helper helper;
