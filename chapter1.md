@@ -67,6 +67,19 @@ class A{
 ```
 ## 双锁模式在单例中的应用
 ```java
-class Foo {    private volatile Helper helper;    public Helper getHelper() {        Helper result = helper;        if (result == null) {            synchronized(this) {                result = helper;                if (result == null) {                    helper = result = new Helper();                }            }        }        return result;    }
-
+class Foo {
+    private volatile Helper helper;
+    public Helper getHelper() {
+        Helper localRef = helper;
+        if (localRef == null) {
+            synchronized (this) {
+                localRef = helper;
+                if (localRef == null) {
+                    helper = localRef = new Helper();
+                }
+            }
+        }
+        return localRef;
+    }
+}
 ```
