@@ -1,7 +1,5 @@
 # java
 
-
-
 ```mermaid
 graph LR;
     java-->JVM;
